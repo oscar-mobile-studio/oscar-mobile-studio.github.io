@@ -1,74 +1,214 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Oscar Mobile Studio - Desarrollador de aplicaciones Android para Google Play">
-  <title>Oscar Mobile Studio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscar Mobile Studio - Desarrollador de Aplicaciones Android</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #58a6ff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .section-header p {
+            margin-top: 1rem;
+            font-size: 1.125rem;
+            color: #8b949e;
+        }
+        .card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.7);
+        }
+        .review-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .app-store-badge {
+            display: inline-block;
+            margin-top: 1rem;
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+        }
+        .google-play-badge {
+            height: 60px;
+        }
+        .developer-badge {
+            width: 150px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
-  <!-- Header -->
-  <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-      <div class="flex items-center space-x-3">
-        <img src="logo oscarmovile studio.png" alt="Oscar Mobile Studio Logo" class="h-12">
-        <span class="text-2xl font-bold text-yellow-400">Oscar Mobile Studio</span>
-      </div>
-      <nav class="space-x-6 hidden md:flex">
-        <a href="#apps" class="hover:text-yellow-400">Apps</a>
-        <a href="#about" class="hover:text-yellow-400">Sobre mí</a>
-        <a href="#contact" class="hover:text-yellow-400">Contacto</a>
-      </nav>
-    </div>
-  </header>
+<body>
 
-  <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-yellow-500 to-blue-600 text-center py-20">
-    <h1 class="text-4xl md:text-6xl font-extrabold">Creando experiencias móviles únicas</h1>
-    <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto">Desarrollo de aplicaciones Android listas para producción en Google Play, optimizadas para rendimiento y usabilidad.</p>
-    <a href="#apps" class="mt-6 inline-block bg-yellow-400 text-gray-900 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-yellow-300 transition">Ver mis aplicaciones</a>
-  </section>
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white py-12">
+        <div class="container flex flex-col md:flex-row items-center justify-between">
+            <div class="mb-6 md:mb-0 text-center md:text-left">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-2">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-yellow-500">
+                        Oscar Mobile Studio
+                    </span>
+                </h1>
+                <p class="text-lg sm:text-xl lg:text-2xl font-light">Desarrollador de Aplicaciones Android de Élite</p>
+            </div>
+            <img src="https://placehold.co/192x192/0d1117/c9d1d9?text=Logo+de+OSCAR" alt="Logo de Oscar Mobile Studio" class="w-48 h-48 rounded-full border-4 border-yellow-400 shadow-lg">
+        </div>
+    </header>
 
-  <!-- Apps Section -->
-  <section id="apps" class="max-w-6xl mx-auto py-16 px-6">
-    <h2 class="text-3xl font-bold text-center mb-12">Mis Aplicaciones en Google Play</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- App Card -->
-      <div class="bg-gray-800 rounded-2xl p-6 shadow-lg hover:scale-105 transition">
-        <img src="https://play-lh.googleusercontent.com/8ItjI0spWqO5xkQ5AQMCyzG61ChOHd43HRRAKwH8Uu7y5NsVlfjZb4ppkDOKtdxM-A=s256-rw" alt="Duovoz App" class="rounded-xl mb-4">
-        <h3 class="text-xl font-bold">Duovoz</h3>
-        <p class="text-gray-400 mt-2">Una aplicación innovadora que permite practicar idiomas con conversaciones reales y dinámicas. Ideal para estudiantes y profesionales que buscan mejorar su fluidez.</p>
-        <a href="https://play.google.com/store/apps/details?id=com.oscar.duovoz" target="_blank" class="mt-4 inline-block bg-yellow-400 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:bg-yellow-300 transition">Disponible en Google Play</a>
-      </div>
-    </div>
+    <!-- Main Content -->
+    <main class="container py-12">
+        
+        <!-- App Showcase Section -->
+        <section class="mb-12">
+            <div class="section-header">
+                <h2>Nuestra Aplicación Destacada</h2>
+                <p>Una solución innovadora ya disponible en Google Play Store.</p>
+            </div>
+            <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-12 card">
+                <div class="flex-shrink-0">
+                    <img src="https://placehold.co/300x530/58a6ff/ffffff?text=Duovoz+App+Captura" alt="Captura de pantalla de la aplicación Duovoz" class="rounded-xl shadow-lg border-2 border-gray-600">
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold text-white mb-4">Duovoz: Traduce y Comparte</h3>
+                    <p class="text-lg text-gray-400 mb-6">
+                        Duovoz es la herramienta definitiva para la comunicación sin barreras. Esta aplicación, diseñada para la simplicidad y la eficacia, te permite traducir tu voz en tiempo real y compartir fácilmente las conversaciones. 
+                    </p>
+                    <p class="text-lg text-gray-400 mb-6">
+                        Con una interfaz intuitiva y un rendimiento optimizado, Duovoz es indispensable para viajeros, estudiantes y profesionales.
+                    </p>
+                    <div class="app-store-badge">
+                        <a href="https://play.google.com/store/apps/details?id=com.oscar.duovoz" target="_blank">
+                            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/es_badge_web_generic.png" alt="Disponible en Google Play" class="google-play-badge">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Review Section -->
-    <div class="mt-16 bg-gray-700 rounded-2xl p-8 text-center shadow-lg">
-      <h3 class="text-2xl font-bold text-yellow-400 mb-4">Reseña Destacada</h3>
-      <p class="text-gray-200 italic max-w-3xl mx-auto">“Duovoz es una herramienta imprescindible para quienes desean aprender y practicar idiomas de manera efectiva. Su diseño intuitivo y las funciones interactivas la convierten en una de las mejores opciones en Google Play.”</p>
-    </div>
-  </section>
+        <!-- User Reviews Section -->
+        <section class="mb-12">
+            <div class="section-header">
+                <h2>Lo que dicen nuestros usuarios</h2>
+                <p>Reseñas de la comunidad de Duovoz.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Reseña 1 -->
+                <div class="card p-6">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl text-yellow-400">★★★★★</span>
+                        <h4 class="font-semibold text-lg ml-2 text-white">Excelente herramienta de viaje</h4>
+                    </div>
+                    <p class="text-gray-400 italic">"¡Esta app me salvó en mi último viaje! La traducción es muy precisa y rápida. Ahora puedo comunicarme con la gente sin problemas. ¡Totalmente recomendada!"</p>
+                    <p class="text-sm font-light text-gray-500 mt-4">- Usuario de Google Play</p>
+                </div>
+                <!-- Reseña 2 -->
+                <div class="card p-6">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl text-yellow-400">★★★★★</span>
+                        <h4 class="font-semibold text-lg ml-2 text-white">Súper útil para estudiar</h4>
+                    </div>
+                    <p class="text-gray-400 italic">"Uso Duovoz para practicar idiomas y es fantástica. Me ayuda a mejorar mi pronunciación y entender conversaciones. Me encanta que pueda guardar y compartir las traducciones."</p>
+                    <p class="text-sm font-light text-gray-500 mt-4">- Estudiante</p>
+                </div>
+                <!-- Reseña 3 -->
+                <div class="card p-6">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl text-yellow-400">★★★★★</span>
+                        <h4 class="font-semibold text-lg ml-2 text-white">Simple y efectiva</h4>
+                    </div>
+                    <p class="text-gray-400 italic">"Una aplicación que hace exactamente lo que promete. La interfaz es muy limpia y fácil de usar. Es una de las mejores apps de traducción que he probado. ¡Buen trabajo!"</p>
+                    <p class="text-sm font-light text-gray-500 mt-4">- Desarrollador</p>
+                </div>
+            </div>
+        </section>
 
-  <!-- About Section -->
-  <section id="about" class="bg-gray-800 py-16 px-6">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-6">Sobre mí</h2>
-      <p class="text-gray-300 leading-relaxed mb-6">Soy un <strong>desarrollador certificado por Google</strong> con cuenta oficial en Google Play. Mi experiencia está enfocada en crear aplicaciones modernas, seguras y escalables que aporten valor real a los usuarios.</p>
-      <p class="text-gray-300 leading-relaxed">En un mundo donde los teléfonos móviles son el centro de la vida digital, las aplicaciones son mucho más relevantes que las páginas web tradicionales. Las apps permiten un acceso rápido, notificaciones en tiempo real y una experiencia optimizada para el usuario, garantizando mayor interacción y fidelización.</p>
-    </div>
-  </section>
+        <!-- Developer Review Section -->
+        <section class="mb-12">
+            <div class="section-header">
+                <h2>Experiencia y Compromiso</h2>
+                <p>La persona detrás del código.</p>
+            </div>
+            <div class="card review-card">
+                <!-- Placeholder de la insignia de Google Developer -->
+                <img src="https://developers.google.com/static/site-assets/images/google-g-logo.png" alt="Insignia de Google Developer" class="developer-badge">
+                <h3 class="text-2xl font-bold text-white mb-2">Una Garantía de Calidad</h3>
+                <p class="text-gray-400 text-lg">
+                    Como desarrollador certificado por Google y con una cuenta activa en Google Play Developer, mi compromiso es con la calidad y la innovación. Cada aplicación es creada con los más altos estándares, siguiendo las mejores prácticas de Google para asegurar que sean seguras, eficientes y ofrezcan una experiencia de usuario excepcional. Mi enfoque es transformar ideas en soluciones móviles que resuelvan problemas reales y mejoren la vida de las personas.
+                </p>
+            </div>
+        </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-16 px-6 max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-6">Contacto</h2>
-    <p class="text-gray-300 mb-4">¿Tienes un proyecto en mente o deseas colaborar?</p>
-    <a href="mailto:contacto@oscarmobile.com" class="bg-yellow-400 text-gray-900 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-yellow-300 transition">Escríbeme</a>
-  </section>
+        <!-- Justification for Mobile Apps Section -->
+        <section class="mb-12">
+            <div class="section-header">
+                <h2>¿Por qué Aplicaciones Móviles?</h2>
+                <p>El poder de las apps en el mundo moderno.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-2xl font-bold text-white mb-2">Acceso Instantáneo y Funcionalidad Offline</h3>
+                    <p class="text-gray-400">
+                        A diferencia de las páginas web que dependen de una conexión constante a internet y de un navegador, las aplicaciones móviles ofrecen acceso instantáneo y pueden funcionar en gran medida sin conexión. Esto es crucial en situaciones de conectividad limitada, garantizando que el usuario pueda interactuar con la aplicación en cualquier momento y lugar.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-bold text-white mb-2">Rendimiento Superior y Características Nativas</h3>
+                    <p class="text-400">
+                        Las aplicaciones nativas están construidas específicamente para el sistema operativo, lo que les permite aprovechar al máximo las capacidades del hardware del dispositivo. Esto se traduce en un rendimiento más rápido, una interfaz más fluida y el acceso a funcionalidades nativas como la cámara, el GPS, el micrófono y las notificaciones push, lo que no es posible con una página web tradicional.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-bold text-white mb-2">Mejor Experiencia de Usuario</h3>
+                    <p class="text-gray-400">
+                        Una aplicación móvil ofrece una experiencia de usuario más inmersiva y personalizable. Permite un diseño más enfocado en la interacción táctil y puede almacenar preferencias de usuario para una experiencia más personalizada. Además, la presencia en tiendas como Google Play genera confianza y credibilidad en el producto y el desarrollador.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-bold text-white mb-2">Monetización y Crecimiento</h3>
+                    <p class="text-gray-400">
+                        Las tiendas de aplicaciones no solo son un canal de distribución, sino también una plataforma de monetización con modelos como compras integradas, anuncios y suscripciones. Esto ofrece un camino claro para el crecimiento del negocio. La visibilidad en la tienda de Google Play también ayuda a generar una comunidad de usuarios leales y a aumentar la base de usuarios de manera orgánica.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 py-6 text-center text-gray-400">
-    <p>© 2025 Oscar Mobile Studio. Todos los derechos reservados.</p>
-  </footer>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-center py-6 border-t border-gray-700">
+        <p class="text-gray-500 text-sm">&copy; 2024 Oscar Mobile Studio. Todos los derechos reservados.</p>
+        <p class="text-gray-500 text-sm mt-2">Visita nuestra app en Google Play Store para más información.</p>
+    </footer>
+
 </body>
 </html>
