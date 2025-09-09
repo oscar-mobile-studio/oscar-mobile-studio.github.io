@@ -1,207 +1,74 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oscar Mobile Studio | Desarrollador</title>
-    <!-- Tailwind CSS desde CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #121212;
-            color: #E0E0E0;
-        }
-        .text-gradient {
-            background-image: linear-gradient(to right, #6EE7B7, #3B82F6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .card {
-            background-color: #1E1E1E;
-        }
-        .btn-primary {
-            background-color: #3B82F6;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-        .btn-primary:hover {
-            background-color: #2563EB;
-            transform: translateY(-2px);
-        }
-        .nav-link:hover {
-            color: #3B82F6;
-            transition: color 0.2s;
-        }
-        /* Estilo para los iconos */
-        .icon {
-            filter: invert(1);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Oscar Mobile Studio - Desarrollador de aplicaciones Android para Google Play">
+  <title>Oscar Mobile Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="antialiased">
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Header -->
+  <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <div class="flex items-center space-x-3">
+        <img src="logo oscarmovile studio.png" alt="Oscar Mobile Studio Logo" class="h-12">
+        <span class="text-2xl font-bold text-yellow-400">Oscar Mobile Studio</span>
+      </div>
+      <nav class="space-x-6 hidden md:flex">
+        <a href="#apps" class="hover:text-yellow-400">Apps</a>
+        <a href="#about" class="hover:text-yellow-400">Sobre mí</a>
+        <a href="#contact" class="hover:text-yellow-400">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Header y Navegación -->
-    <header class="fixed top-0 left-0 w-full bg-black bg-opacity-80 backdrop-blur-sm z-50 shadow-lg">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="flex items-center text-2xl font-bold text-white tracking-wide">
-                <img src="./logo oscarmovile studio.jpg" alt="Logo Oscar Mobile Studio" class="h-10 w-10 mr-2 rounded-full">
-                oscar-mobile-studio
-            </a>
-            <nav id="nav-menu" class="hidden md:flex space-x-8 font-medium">
-                <a href="#proyectos" class="nav-link">Proyectos</a>
-                <a href="#habilidades" class="nav-link">Habilidades</a>
-                <a href="#contacto" class="nav-link">Contacto</a>
-            </nav>
-            <button id="menu-btn" class="text-white md:hidden focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
-        </div>
-        <!-- Menú Móvil -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-900">
-            <a href="#proyectos" class="block py-3 px-4 text-sm font-semibold hover:bg-gray-700">Proyectos</a>
-            <a href="#habilidades" class="block py-3 px-4 text-sm font-semibold hover:bg-gray-700">Habilidades</a>
-            <a href="#contacto" class="block py-3 px-4 text-sm font-semibold hover:bg-gray-700">Contacto</a>
-        </div>
-    </header>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-yellow-500 to-blue-600 text-center py-20">
+    <h1 class="text-4xl md:text-6xl font-extrabold">Creando experiencias móviles únicas</h1>
+    <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto">Desarrollo de aplicaciones Android listas para producción en Google Play, optimizadas para rendimiento y usabilidad.</p>
+    <a href="#apps" class="mt-6 inline-block bg-yellow-400 text-gray-900 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-yellow-300 transition">Ver mis aplicaciones</a>
+  </section>
 
-    <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center text-center p-8 bg-black">
-        <div class="max-w-4xl">
-            <img src="./Image_2.jpg" alt="Imagen del Portafolio" class="mx-auto rounded-3xl shadow-2xl mb-8 transform hover:scale-105 transition-transform duration-500">
-            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight mb-4">
-                Desarrollo de <span class="text-gradient">Software</span> de Calidad
-            </h1>
-            <p class="text-lg md:text-xl text-gray-400 mb-8">
-                Hola, soy Óscar, un desarrollador apasionado por crear soluciones web y móviles. Explora mis proyectos para ver mi trabajo en acción.
-            </p>
-            <a href="#proyectos" class="inline-block py-3 px-8 rounded-full font-bold btn-primary text-white shadow-lg">
-                Ver Proyectos
-            </a>
-        </div>
-    </section>
+  <!-- Apps Section -->
+  <section id="apps" class="max-w-6xl mx-auto py-16 px-6">
+    <h2 class="text-3xl font-bold text-center mb-12">Mis Aplicaciones en Google Play</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- App Card -->
+      <div class="bg-gray-800 rounded-2xl p-6 shadow-lg hover:scale-105 transition">
+        <img src="https://play-lh.googleusercontent.com/8ItjI0spWqO5xkQ5AQMCyzG61ChOHd43HRRAKwH8Uu7y5NsVlfjZb4ppkDOKtdxM-A=s256-rw" alt="Duovoz App" class="rounded-xl mb-4">
+        <h3 class="text-xl font-bold">Duovoz</h3>
+        <p class="text-gray-400 mt-2">Una aplicación innovadora que permite practicar idiomas con conversaciones reales y dinámicas. Ideal para estudiantes y profesionales que buscan mejorar su fluidez.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.oscar.duovoz" target="_blank" class="mt-4 inline-block bg-yellow-400 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:bg-yellow-300 transition">Disponible en Google Play</a>
+      </div>
+    </div>
 
-    <!-- Sección de Proyectos -->
-    <section id="proyectos" class="py-20 px-4 md:px-8">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-12">Mis Proyectos</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Review Section -->
+    <div class="mt-16 bg-gray-700 rounded-2xl p-8 text-center shadow-lg">
+      <h3 class="text-2xl font-bold text-yellow-400 mb-4">Reseña Destacada</h3>
+      <p class="text-gray-200 italic max-w-3xl mx-auto">“Duovoz es una herramienta imprescindible para quienes desean aprender y practicar idiomas de manera efectiva. Su diseño intuitivo y las funciones interactivas la convierten en una de las mejores opciones en Google Play.”</p>
+    </div>
+  </section>
 
-                <!-- Proyecto 1 -->
-                <div class="card rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                    <img src="https://placehold.co/600x400/121212/E0E0E0?text=Proyecto+Web" alt="Imagen del Proyecto" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-semibold mb-2">Plataforma de E-commerce</h3>
-                        <p class="text-gray-400 mb-4">
-                            Desarrollo de una plataforma completa de comercio electrónico con carrito de compras, pasarela de pago y panel de administración.
-                        </p>
-                        <a href="https://github.com/oscar-mobile-studio" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-400 hover:underline">
-                            Ver en GitHub &rarr;
-                        </a>
-                    </div>
-                </div>
+  <!-- About Section -->
+  <section id="about" class="bg-gray-800 py-16 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Sobre mí</h2>
+      <p class="text-gray-300 leading-relaxed mb-6">Soy un <strong>desarrollador certificado por Google</strong> con cuenta oficial en Google Play. Mi experiencia está enfocada en crear aplicaciones modernas, seguras y escalables que aporten valor real a los usuarios.</p>
+      <p class="text-gray-300 leading-relaxed">En un mundo donde los teléfonos móviles son el centro de la vida digital, las aplicaciones son mucho más relevantes que las páginas web tradicionales. Las apps permiten un acceso rápido, notificaciones en tiempo real y una experiencia optimizada para el usuario, garantizando mayor interacción y fidelización.</p>
+    </div>
+  </section>
 
-                <!-- Proyecto 2 -->
-                <div class="card rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                    <img src="https://placehold.co/600x400/121212/E0E0E0?text=App+Móvil" alt="Imagen del Proyecto" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-semibold mb-2">Aplicación de Tareas</h3>
-                        <p class="text-gray-400 mb-4">
-                            Aplicación móvil para la gestión de tareas diarias con notificaciones push y sincronización en la nube.
-                        </p>
-                        <a href="https://github.com/oscar-mobile-studio" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-400 hover:underline">
-                            Ver en GitHub &rarr;
-                        </a>
-                    </div>
-                </div>
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 px-6 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6">Contacto</h2>
+    <p class="text-gray-300 mb-4">¿Tienes un proyecto en mente o deseas colaborar?</p>
+    <a href="mailto:contacto@oscarmobile.com" class="bg-yellow-400 text-gray-900 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-yellow-300 transition">Escríbeme</a>
+  </section>
 
-                <!-- Proyecto 3 -->
-                <div class="card rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                    <img src="./img_cel_app.jpg" alt="DuoVoz App" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-semibold mb-2">DuoVoz - Aplicación Android</h3>
-                        <p class="text-gray-400 mb-4">
-                            Aplicación móvil desarrollada en Kotlin para la gestión de tareas diarias y comunicación. Disponible en Google Play.
-                        </p>
-                        <a href="https://play.google.com/store/apps/details?id=com.oscar.duovoz" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-400 hover:underline">
-                            Descargar en Google Play &rarr;
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección de Habilidades -->
-    <section id="habilidades" class="py-20 px-4 md:px-8 bg-gray-900">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-12">Mis Habilidades</h2>
-            <div class="flex flex-wrap justify-center gap-4">
-                <span class="bg-gray-800 text-green-400 px-4 py-2 rounded-full font-semibold">HTML5</span>
-                <span class="bg-gray-800 text-blue-400 px-4 py-2 rounded-full font-semibold">CSS3</span>
-                <span class="bg-gray-800 text-yellow-400 px-4 py-2 rounded-full font-semibold">JavaScript (ES6+)</span>
-                <span class="bg-gray-800 text-indigo-400 px-4 py-2 rounded-full font-semibold">React</span>
-                <span class="bg-gray-800 text-cyan-400 px-4 py-2 rounded-full font-semibold">Vue.js</span>
-                <span class="bg-gray-800 text-purple-400 px-4 py-2 rounded-full font-semibold">Node.js</span>
-                <span class="bg-gray-800 text-red-400 px-4 py-2 rounded-full font-semibold">Python</span>
-                <span class="bg-gray-800 text-teal-400 px-4 py-2 rounded-full font-semibold">Tailwind CSS</span>
-                <span class="bg-gray-800 text-blue-300 px-4 py-2 rounded-full font-semibold">Git & GitHub</span>
-                <span class="bg-gray-800 text-fuchsia-400 px-4 py-2 rounded-full font-semibold">Firebase</span>
-                <span class="bg-gray-800 text-orange-400 px-4 py-2 rounded-full font-semibold">Docker</span>
-                <span class="bg-gray-800 text-teal-200 px-4 py-2 rounded-full font-semibold">Kotlin (Android)</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección de Contacto -->
-    <section id="contacto" class="py-20 px-4 md:px-8">
-        <div class="container mx-auto max-w-2xl text-center">
-            <h2 class="text-4xl font-bold mb-8">Contáctame</h2>
-            <p class="text-gray-400 mb-8">
-                Si tienes un proyecto en mente o quieres colaborar, no dudes en enviarme un mensaje.
-            </p>
-            <div class="flex flex-col items-center space-y-4">
-                <a href="mailto:tu-email@example.com" class="inline-block py-3 px-8 rounded-full font-bold btn-primary text-white shadow-lg">
-                    Enviar un Email
-                </a>
-                <a href="https://github.com/oscar-mobile-studio" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors duration-200 flex items-center">
-                    <svg class="w-6 h-6 mr-2 icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.11.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.72-4.043-1.61-4.043-1.61-.546-1.387-1.332-1.758-1.332-1.758-1.09-.744.083-.73.083-.73 1.205.085 1.838 1.238 1.838 1.238 1.07 1.833 2.809 1.304 3.49-.997.108-.775.418-1.305.762-1.605-2.665-.3-5.466-1.333-5.466-5.93 0-1.31.465-2.383 1.235-3.22-.124-.3-.535-1.523.117-3.176 0 0 1.008-.323 3.303 1.23.957-.266 1.983-.4 3.004-.404 1.02.004 2.046.138 3.004.404 2.294-1.553 3.302-1.23 3.302-1.23.652 1.653.24 2.876.118 3.176.77.837 1.233 1.91 1.233 3.22 0 4.608-2.804 5.626-5.475 5.92-.41.355-.78.96-.78 1.94 0 1.405-.014 2.54-.014 2.89 0 .32.22.69.825.577C20.565 21.8 24 17.302 24 12c0-6.627-5.373-12-12-12z" fill="#E0E0E0"/>
-                    </svg>
-                    GitHub
-                </a>
-                <a href="https://play.google.com/store/apps/dev?id=5164223293845014389" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors duration-200 flex items-center">
-                    <img src="./iconogoolge.png" alt="Google Play Icon" class="w-6 h-6 mr-2">
-                    Google Play Store
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 py-8 px-4 md:px-8 text-center text-sm text-gray-500">
-        <p>&copy; 2024 oscar-mobile-studio. Todos los derechos reservados.</p>
-        <p class="mt-2">Desarrollado con ❤️ y <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">Tailwind CSS</a>.</p>
-    </footer>
-
-    <script>
-        // Lógica para el menú de navegación en móviles
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Ocultar el menú móvil al hacer clic en un enlace
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    </script>
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-6 text-center text-gray-400">
+    <p>© 2025 Oscar Mobile Studio. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
