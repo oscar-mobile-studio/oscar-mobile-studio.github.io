@@ -66,6 +66,20 @@
             height: auto;
             margin-bottom: 1rem;
         }
+        .badges-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .badge-item {
+            width: 150px;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+        }
     </style>
 </head>
 <body>
@@ -81,9 +95,7 @@
                 </h1>
                 <p class="text-lg sm:text-xl lg:text-2xl font-light">Desarrollador de Aplicaciones Android de Élite</p>
             </div>
-            <!-- INICIO: Aquí está el código del logo -->
             <img src="https://raw.githubusercontent.com/oscar-mobile-studio/oscar-mobile-studio.github.io/main/logo%20oscarmovile%20studio.png" alt="Logo de Oscar Mobile Studio" class="w-48 h-48 rounded-full border-4 border-yellow-400 shadow-lg">
-            <!-- FIN: Aquí está el código del logo -->
         </div>
     </header>
 
@@ -162,57 +174,59 @@
                 <p>La persona detrás del código.</p>
             </div>
             <div class="card review-card">
-                <!-- Insignia de Google Developer -->
-                <a href="https://developers.google.com/profile/u/101643407964919182799?hl=es-419" target="_blank">
-                    <img src="https://raw.githubusercontent.com/oscar-mobile-studio/oscar-mobile-studio.github.io/main/image_0b3efb.png" alt="Insignia de Google Developer" class="developer-badge">
-                </a>
-                <h3 class="text-2xl font-bold text-white mb-2">Una Garantía de Calidad</h3>
-                <p class="text-gray-400 text-lg">
-                    Como desarrollador certificado por Google y con una cuenta activa en Google Play Developer, mi compromiso es con la calidad y la innovación. Cada aplicación es creada con los más altos estándares, siguiendo las mejores prácticas de Google para asegurar que sean seguras, eficientes y ofrezcan una experiencia de usuario excepcional. Mi enfoque es transformar ideas en soluciones móviles que resuelvan problemas reales y mejoren la vida de las personas.
+                <div class="badges-container">
+                    <a href="https://developers.google.com/profile/u/101643407964919182799?hl=es-419" target="_blank">
+                        <img src="https://www.gstatic.com/devrel-devsite/prod/vc3d2581c3c9f2b842973715c6d37b13a7c64a3e7921a2d4806a6444c1d764/developers/images/badges/google-developer-learning-recognitions.png" alt="Insignia de Learning Recognitions" class="badge-item">
+                    </a>
+                    <a href="https://developers.google.com/profile/u/101643407964919182799?hl=es-419" target="_blank">
+                        <img src="https://www.gstatic.com/devrel-devsite/prod/vc3d2581c3c9f2b842973715c6d37b13a7c64a3e7921a2d4806a6444c1d764/developers/images/badges/android-studio-canary-installed.png" alt="Insignia de Android Studio Canary Installed" class="badge-item">
+                    </a>
+                    <a href="https://developers.google.com/profile/u/101643407964919182799?hl=es-419" target="_blank">
+                        <img src="https://www.gstatic.com/devrel-devsite/prod/vc3d2581c3c9f2b842973715c6d37b13a7c64a3e7921a2d4806a6444c1d764/developers/images/badges/android-studio-installed.png" alt="Insignia de Android Studio Installed" class="badge-item">
+                    </a>
+                    <a href="https://developers.google.com/profile/u/101643407964919182799?hl=es-419" target="_blank">
+                        <img src="https://www.gstatic.com/devrel-devsite/prod/vc3d2581c3c9f2b842973715c6d37b13a7c64a3e7921a2d4806a6444c1d764/developers/images/badges/google-developer-profile-created.png" alt="Insignia de Perfil Creado" class="badge-item">
+                    </a>
+                </div>
+                <h4 class="font-semibold text-xl text-white mt-4">Oscar Mobile Studio</h4>
+                <p class="text-gray-400 text-sm">Desarrollador Certificado de Google</p>
+                <p class="mt-4 text-gray-300 max-w-2xl">
+                    Como desarrollador certificado de Google con una cuenta activa en Google Play, mi compromiso es crear aplicaciones que no solo sean innovadoras, sino también de la más alta calidad y seguridad. Cada línea de código está pensada para ofrecer una experiencia de usuario excepcional y un rendimiento impecable. 
                 </p>
             </div>
         </section>
 
-        <!-- Justification for Mobile Apps Section -->
-        <section class="mb-12">
+        <!-- App vs Web Section -->
+        <section>
             <div class="section-header">
-                <h2>¿Por qué Aplicaciones Móviles?</h2>
-                <p>El poder de las apps en el mundo moderno.</p>
+                <h2>¿Por qué una aplicación móvil y no una página web?</h2>
+                <p>El poder de las aplicaciones nativas en la palma de tu mano.</p>
             </div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="card">
-                    <h3 class="text-2xl font-bold text-white mb-2">Acceso Instantáneo y Funcionalidad Offline</h3>
-                    <p class="text-gray-400">
-                        A diferencia de las páginas web que dependen de una conexión constante a internet y de un navegador, las aplicaciones móviles ofrecen acceso instantáneo y pueden funcionar en gran medida sin conexión. Esto es crucial en situaciones de conectividad limitada, garantizando que el usuario pueda interactuar con la aplicación en cualquier momento y lugar.
-                    </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Razón 1 -->
+                <div class="card p-6">
+                    <h3 class="font-bold text-xl text-white mb-2">Rendimiento Superior</h3>
+                    <p class="text-gray-400">Las aplicaciones nativas de Android están optimizadas para el hardware del dispositivo, lo que se traduce en un rendimiento mucho más rápido y una experiencia de usuario fluida y sin interrupciones.</p>
                 </div>
-                <div class="card">
-                    <h3 class="text-2xl font-bold text-white mb-2">Rendimiento Superior y Características Nativas</h3>
-                    <p class="text-gray-400">
-                        Las aplicaciones nativas están construidas específicamente para el sistema operativo, lo que les permite aprovechar al máximo las capacidades del hardware del dispositivo. Esto se traduce en un rendimiento más rápido, una interfaz más fluida y el acceso a funcionalidades nativas como la cámara, el GPS, el micrófono y las notificaciones push, lo que no es posible con una página web tradicional.
-                    </p>
+                <!-- Razón 2 -->
+                <div class="card p-6">
+                    <h3 class="font-bold text-xl text-white mb-2">Acceso a Funcionalidades Nativas</h3>
+                    <p class="text-gray-400">Una aplicación puede usar directamente las funciones del teléfono como la cámara, el GPS, los contactos y las notificaciones push, lo que no es posible con una página web.</p>
                 </div>
-                <div class="card">
-                    <h3 class="text-2xl font-bold text-white mb-2">Mejor Experiencia de Usuario</h3>
-                    <p class="text-gray-400">
-                        Una aplicación móvil ofrece una experiencia de usuario más inmersiva y personalizable. Permite un diseño más enfocado en la interacción táctil y puede almacenar preferencias de usuario para una experiencia más personalizada. Además, la presencia en tiendas como Google Play genera confianza y credibilidad en el producto y el desarrollador.
-                    </p>
-                </div>
-                <div class="card">
-                    <h3 class="text-2xl font-bold text-white mb-2">Monetización y Crecimiento</h3>
-                    <p class="text-gray-400">
-                        Las tiendas de aplicaciones no solo son un canal de distribución, sino también una plataforma de monetización con modelos como compras integradas, anuncios y suscripciones. Esto ofrece un camino claro para el crecimiento del negocio. La visibilidad en la tienda de Google Play también ayuda a generar una comunidad de usuarios leales y a aumentar la base de usuarios de manera orgánica.
-                    </p>
+                <!-- Razón 3 -->
+                <div class="card p-6">
+                    <h3 class="font-bold text-xl text-white mb-2">Experiencia de Usuario Integrada</h3>
+                    <p class="text-gray-400">Las aplicaciones se integran perfectamente con el ecosistema del dispositivo, ofreciendo una experiencia coherente, accesible y familiar para el usuario.</p>
                 </div>
             </div>
         </section>
-
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-center py-6 border-t border-gray-700">
-        <p class="text-gray-500 text-sm">&copy; 2024 Oscar Mobile Studio. Todos los derechos reservados.</p>
-        <p class="text-gray-500 text-sm mt-2">Visita nuestra app en Google Play Store para más información.</p>
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-400 text-center py-8 mt-12">
+        <div class="container">
+            <p>&copy; 2024 Oscar Mobile Studio. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
 </body>
